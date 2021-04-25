@@ -127,7 +127,10 @@ class ModalFrame extends React.Component {
 								<div className="d-flex flex-row" style={{
 									padding: "0.5vw 1vw"
 								}}>
-									<button type="button" class="btn btn-success ms-auto" onClick={() => this.props.finishRequest(this.props.modalId, this.state.textarea)}>Завершить обращение</button>
+									<button type="button" class="btn btn-success ms-auto" onClick={() => {
+										$("#comment").val("");
+										this.props.finishRequest(this.props.modalId, this.state.textarea);
+									}}>Завершить обращение</button>
 								</div>
 							)
 						}

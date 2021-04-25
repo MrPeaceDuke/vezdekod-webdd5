@@ -272,16 +272,20 @@ class App extends React.Component {
 					currentStaff: -1,
 					adminState: true,
 					status: [1, 0, 0]
+				}, () => {
+					this.setCountRows(this.state.countRows);
 				})
-				this.setCountRows(this.state.countRows);
+
 				break;
 			default:
 				this.setState({
 					currentStaff: value,
 					adminState: false,
 					status: [1, 0, 0]
+				}, () => {
+					this.setCountRows(this.state.countRows);
 				})
-				this.setCountRows(this.state.countRows);
+
 				break;
 		}
 
